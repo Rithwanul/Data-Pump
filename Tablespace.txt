@@ -1,0 +1,33 @@
+/**
+* Discussion on tablespace step by step using Data pump
+* in oracle.
+*/
+
+** create a table sapce using the name erp_dekko_table space
+** check all the tablespaces
+** then export from the database
+
+
+1. create a folder in any directory except the oracle database base directory
+2. show all the tablespace.
+3. then expdp from cmd
+
+Now i will show you an example:
+
+
+create a directory in any location in the windows. As i have created "D:\Oracle\Data Pump\Table Space\DEC_01_2022_TABLESPACE"
+
+Now open the terminal,
+
+Type step 01 : sqlplus / as sysdba;
+// Create a directory using cmd
+type step 02 :   create directory erp_dekko_table as 'D:\Oracle\Data Pump\Table Space\DEC_01_2022_TABLESPACE';
+// see all the table space
+Type step 03 : select name from v$tablespace;
+Type step 04 : get out of sqlplus. using the exit command
+Type step 05 : expdp erp/dico@orcl directory = erp_dekko_table dumpfile = tablespacedekko.dmp logfile = error.log tablespaces = users, example;  
+
+
+
+
+
