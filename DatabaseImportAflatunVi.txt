@@ -1,0 +1,4 @@
+Dump location: F:\Oracle11g\admin\orcl\dpdump - exported file folder location
+C:\Windows\System32\cmd.exe
+
+host impdp  dumpfile=EXPDALERP170025112022.DMP remap_schema=DALERP:DALERP_test logfile=expDALERP130029112022.log

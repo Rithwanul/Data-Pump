@@ -1,0 +1,23 @@
+/**
+* Data pump expdp lecture 1
+*/
+
+step 1: Create folders Data pump -> File Export -> DEC_1_2022
+step 2: 
+	a. Login as "/ as sysdba" in the sqlplus
+	b. run command "show user";
+	c. create directory erp_export_2022 to ""Link dorectory" #paste the link of the directory
+	d. Grant read and write permission to the user;
+		Ex. Grant read,write on erp_export_2022 to erp; 
+	e. grant a role to the user. role name : datapump_exp_full_database
+		ex. grant datapump_exp_full_database to user;
+	f. exit
+	g. Now export database using the following command.
+		ex. expdmp username/password@databasename directory=erp_export_2022 dumpfile=orclfull.dmp logfile=full_exp.log full = yes;
+		
+/**
+* Data pump expdp lecture 2
+* Data pump expdp - How to Export tablespace in Oracle Database?
+*/
+
+
