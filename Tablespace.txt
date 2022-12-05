@@ -25,7 +25,8 @@ type step 02 :   create directory erp_dekko_table as 'D:\Oracle\Data Pump\Table 
 // see all the table space
 Type step 03 : select name from v$tablespace;
 Type step 04 : get out of sqlplus. using the exit command
-Type step 05 : expdp erp/dico@orcl directory = erp_dekko_table dumpfile = tablespacedekko.dmp logfile = error.log tablespaces = users, example;  
+Type step 05 : write exit in the sqlplus
+Type step 06 : expdp erp/dico@orcl directory = erp_dekko_table dumpfile = tablespacedekko.dmp logfile = error.log tablespaces = users, example;  
 
 
 

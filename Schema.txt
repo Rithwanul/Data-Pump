@@ -1,0 +1,29 @@
+/**
+* Here we are going to see how to export schema using expdp
+*/
+
+What is schema in oracle?
+Ans : A database schema is defined in the Oracle documentation 
+      as a collection of logical data structures or schema objects. Such as 
+      views synonyms, indexes and many more. 
+      A database user owns a database schema, which has the same name as the username. 
+      Database schema objects are user-created structures 
+      that directly refer to data in the database.
+
+/**
+* Create Schema export 
+*/
+
+Step 1 : Create a folder in any directory except the oracle home.
+Step 2 : Login using / as sysdba.
+Step 3 : create a directory using cmd. For example : path of the folder in the first step 
+         "D:\Oracle\Data Pump\Schema Export\DEC_01_2022"
+
+         Example :  create directory erp_schema_export as 'D:\Oracle\Data Pump\Schema Export\DEC_01_2022'; 
+
+Step 4 : Grant priviliges to the user;
+         Example :  grant read, write on directory erp_schema_export to erp;
+Step 5 : Grant role to the user.
+         Example : grant datapump_exp__full_database to erp<UserName>. here erp is user name;
+
+Step 6 : 
